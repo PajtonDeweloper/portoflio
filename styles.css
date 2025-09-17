@@ -233,7 +233,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
-    padding-top: 70px; /* Account for fixed navbar */
+    padding-top: 120px; /* Account for navbar + tech ticker space */
 }
 
 .hero-background {
@@ -425,6 +425,59 @@ body {
     transform: translateY(-2px);
 }
 
+/* Tech Skills Ticker */
+.tech-ticker {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background: rgba(15, 15, 15, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.1);
+    overflow: hidden;
+    z-index: 999;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.tech-ticker-content {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    animation: tickerScroll 30s linear infinite;
+    white-space: nowrap;
+}
+
+.tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tech-item i {
+    font-size: 1.2rem;
+    color: var(--accent-primary);
+}
+
+.tech-item:hover {
+    color: var(--accent-primary);
+}
+
+@keyframes tickerScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 /* Profile Section */
 .profile-container {
     position: relative;
@@ -432,8 +485,8 @@ body {
     justify-content: center;
     align-items: center;
     opacity: 0;
+    transform: scale(0.8);
     animation: fadeInScale 1s ease 0.5s forwards;
-    transform: translateZ(0);
     background: transparent;
 }
 
@@ -445,7 +498,7 @@ body {
     border-radius: 50%;
     background: var(--accent-gradient);
     background-clip: padding-box;
-    animation: rotate 10s linear infinite;
+    animation: rotate 10s linear infinite 1.5s;
 }
 
 .profile-ring::after {
@@ -479,59 +532,6 @@ body {
     background: var(--bg-primary);
 }
 
-.tech-icons {
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    transform: translateZ(0);
-}
-
-.tech-icon {
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    background: var(--bg-card);
-    border: 2px solid var(--border-color);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.5rem;
-    color: var(--accent-primary);
-    animation: gentleBounce 3s ease-in-out infinite;
-    z-index: 2;
-    opacity: 1;
-    transition: all 0.3s ease;
-}
-
-.tech-icon:nth-child(1) {
-    top: 40px;
-    left: 40px;
-    animation-delay: 0s;
-}
-
-.tech-icon:nth-child(2) {
-    top: 40px;
-    right: 40px;
-    animation-delay: 0.75s;
-}
-
-.tech-icon:nth-child(3) {
-    bottom: 40px;
-    right: 40px;
-    animation-delay: 1.5s;
-}
-
-.tech-icon:nth-child(4) {
-    bottom: 40px;
-    left: 40px;
-    animation-delay: 2.25s;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
-}
 
 @keyframes gentleBounce {
     0%, 100% {
@@ -1795,11 +1795,6 @@ section {
     }
     
     
-    .tech-icon {
-        width: 50px;
-        height: 50px;
-        font-size: 1.2rem;
-    }
     
     .profile-ring {
         width: 280px;
@@ -1811,30 +1806,7 @@ section {
         height: 240px;
     }
     
-    .tech-icons {
-        width: 320px;
-        height: 320px;
-    }
     
-    .tech-icon:nth-child(1) {
-        top: 25px;
-        left: 25px;
-    }
-    
-    .tech-icon:nth-child(2) {
-        top: 25px;
-        right: 25px;
-    }
-    
-    .tech-icon:nth-child(3) {
-        bottom: 25px;
-        right: 25px;
-    }
-    
-    .tech-icon:nth-child(4) {
-        bottom: 25px;
-        left: 25px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -1843,8 +1815,25 @@ section {
     }
     
     .hero {
-        padding-top: 90px; /* Extra padding for very small screens */
-        padding-bottom: 80px; /* Extra bottom padding for scroll arrow */
+        padding-top: 130px; /* Extra padding for navbar + ticker + small screens */
+        padding-bottom: 120px; /* Extra bottom padding to prevent overlap with buttons */
+    }
+    
+    .hero-content {
+        gap: 3rem; /* Increased gap between text and image in mobile */
+    }
+    
+    .tech-ticker {
+        height: 40px; /* Smaller height on mobile */
+    }
+    
+    .tech-item {
+        padding: 0 1.5rem;
+        font-size: 0.8rem;
+    }
+    
+    .tech-item i {
+        font-size: 1rem;
     }
     
     .scroll-indicator {
@@ -1896,36 +1885,7 @@ section {
         height: 180px;
     }
     
-    .tech-icons {
-        width: 260px;
-        height: 260px;
-    }
     
-    .tech-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    
-    .tech-icon:nth-child(1) {
-        top: 15px;
-        left: 15px;
-    }
-    
-    .tech-icon:nth-child(2) {
-        top: 15px;
-        right: 15px;
-    }
-    
-    .tech-icon:nth-child(3) {
-        bottom: 15px;
-        right: 15px;
-    }
-    
-    .tech-icon:nth-child(4) {
-        bottom: 15px;
-        left: 15px;
-    }
 }
 
 /* Typewriter Animation */
