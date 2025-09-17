@@ -530,6 +530,17 @@ body {
     position: relative;
     z-index: 2;
     background: var(--bg-primary);
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 20px 60px rgba(99, 102, 241, 0.4),
+        0 8px 25px rgba(139, 92, 246, 0.3),
+        inset 0 0 0 3px rgba(255, 255, 255, 0.1);
+    filter: brightness(1.1) saturate(1.2);
 }
 
 
@@ -1045,13 +1056,14 @@ section {
 
 .specialization-note {
     background: var(--bg-card);
-    border: 2px solid var(--accent-primary);
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius-lg);
     padding: 3rem;
     text-align: center;
     position: relative;
     overflow: hidden;
     margin-top: 4rem;
+    transition: var(--transition-medium);
 }
 
 .specialization-note::before {
@@ -1064,6 +1076,16 @@ section {
     background: var(--accent-gradient-subtle);
     opacity: 0.5;
     z-index: 1;
+}
+
+.specialization-note:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--glow-primary);
+    border-color: var(--accent-primary);
+}
+
+.specialization-note:hover::before {
+    transform: scaleX(1);
 }
 
 .note-content {
@@ -1097,7 +1119,7 @@ section {
 .note-text p {
     color: var(--text-secondary);
     line-height: 1.8;
-    text-align: left;
+    text-align: center;
     font-size: 1.1rem;
 }
 
@@ -1327,7 +1349,7 @@ section {
 }
 
 .summary-text {
-    text-align: left;
+    text-align: center;
     color: white;
 }
 
