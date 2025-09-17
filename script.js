@@ -494,3 +494,139 @@ window.addEventListener('scroll', throttle(() => {
     updateActiveNavLink();
     revealOnScroll();
 }, 16)); // ~60fps
+
+// Typewriter Animation for Code Block
+function initTypewriterAnimation() {
+    const codeContainer = document.getElementById('typewriter-code');
+    const cursor = codeContainer.querySelector('.typing-cursor');
+    
+    // Code content with syntax highlighting structure
+    const codeLines = [
+        {
+            content: "const developer = {",
+            tokens: [
+                { text: "const", class: "keyword" },
+                { text: " ", class: "" },
+                { text: "developer", class: "variable" },
+                { text: " = {", class: "" }
+            ]
+        },
+        {
+            content: "  name: 'Marsel Cylkowski',",
+            tokens: [
+                { text: "  ", class: "" },
+                { text: "name", class: "property" },
+                { text: ": ", class: "" },
+                { text: "'Marsel Cylkowski'", class: "string" },
+                { text: ",", class: "" }
+            ]
+        },
+        {
+            content: "  specialty: 'One-Page Websites',",
+            tokens: [
+                { text: "  ", class: "" },
+                { text: "specialty", class: "property" },
+                { text: ": ", class: "" },
+                { text: "'One-Page Websites'", class: "string" },
+                { text: ",", class: "" }
+            ]
+        },
+        {
+            content: "  aiPowered: true",
+            tokens: [
+                { text: "  ", class: "" },
+                { text: "aiPowered", class: "property" },
+                { text: ": ", class: "" },
+                { text: "true", class: "boolean" }
+            ]
+        },
+        {
+            content: "};",
+            tokens: [
+                { text: "};", class: "" }
+            ]
+        }
+    ];
+    
+    // Clear existing content and set up for typing
+    codeContainer.innerHTML = '';
+    
+    let lineIndex = 0;
+    let tokenIndex = 0;
+    let charIndex = 0;
+    let currentLineElement = null;
+    let currentTokenElement = null;
+    
+    function typeCharacter() {
+        if (lineIndex < codeLines.length) {
+            const currentLine = codeLines[lineIndex];
+            
+            // Create new line element if needed
+            if (tokenIndex === 0 && charIndex === 0) {
+                currentLineElement = document.createElement('div');
+                currentLineElement.className = 'code-line';
+                currentLineElement.innerHTML = `
+                    <span class="line-number">${lineIndex + 1}</span>
+                    <span class="code-text"></span>
+                `;
+                codeContainer.appendChild(currentLineElement);
+            }
+            
+            if (tokenIndex < currentLine.tokens.length) {
+                const currentToken = currentLine.tokens[tokenIndex];
+                const codeTextSpan = currentLineElement.querySelector('.code-text');
+                
+                // Create token element if needed
+                if (charIndex === 0) {
+                    currentTokenElement = document.createElement('span');
+                    if (currentToken.class) {
+                        currentTokenElement.className = currentToken.class;
+                    }
+                    codeTextSpan.appendChild(currentTokenElement);
+                }
+                
+                if (charIndex < currentToken.text.length) {
+                    // Add next character to current token
+                    const char = currentToken.text[charIndex];
+                    currentTokenElement.textContent += char;
+                    charIndex++;
+                    
+                    // Continue typing with random delay for realistic effect
+                    setTimeout(typeCharacter, Math.random() * 80 + 30);
+                } else {
+                    // Move to next token
+                    tokenIndex++;
+                    charIndex = 0;
+                    setTimeout(typeCharacter, 50);
+                }
+            } else {
+                // Move to next line
+                lineIndex++;
+                tokenIndex = 0;
+                charIndex = 0;
+                
+                // Add line break delay
+                setTimeout(typeCharacter, 400);
+            }
+        } else {
+            // Animation completed
+            console.log('Typewriter animation completed');
+        }
+    }
+    
+    // Start animation when about section comes into view
+    const aboutSection = document.getElementById('about');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                setTimeout(typeCharacter, 800); // Start typing with delay
+                observer.unobserve(entry.target); // Run only once
+            }
+        });
+    }, { threshold: 0.2 }); // Trigger when 20% of about section is visible
+    
+    observer.observe(aboutSection);
+}
+
+// Initialize typewriter animation when DOM is loaded
+document.addEventListener('DOMContentLoaded', initTypewriterAnimation);

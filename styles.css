@@ -118,7 +118,7 @@ body {
 .lang-btn {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
+    justify-content: center;
     padding: 0.5rem 1rem;
     background: transparent;
     border: 2px solid var(--border-color);
@@ -144,9 +144,6 @@ body {
     box-shadow: var(--glow-primary);
 }
 
-.lang-btn img {
-    border-radius: 2px;
-}
 
 /* Mobile Responsive for Language Switcher */
 @media (max-width: 768px) {
@@ -158,15 +155,6 @@ body {
     .lang-btn {
         padding: 0.4rem 0.8rem;
         font-size: 0.8rem;
-    }
-    
-    .lang-btn span {
-        display: none;
-    }
-    
-    .lang-btn img {
-        width: 18px;
-        height: 14px;
     }
 }
 
@@ -517,26 +505,26 @@ body {
 }
 
 .tech-icon:nth-child(1) {
-    top: 50px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     animation-delay: 0s;
 }
 
 .tech-icon:nth-child(2) {
-    top: 50px;
-    right: 50px;
+    top: 40px;
+    right: 40px;
     animation-delay: 0.75s;
 }
 
 .tech-icon:nth-child(3) {
-    bottom: 50px;
-    right: 50px;
+    bottom: 40px;
+    right: 40px;
     animation-delay: 1.5s;
 }
 
 .tech-icon:nth-child(4) {
-    bottom: 50px;
-    left: 50px;
+    bottom: 40px;
+    left: 40px;
     animation-delay: 2.25s;
 }
 
@@ -575,7 +563,7 @@ body {
     justify-content: center;
     animation: bounce 2s infinite;
     cursor: pointer;
-    background: var(--bg-primary);
+    background: #1e1e1e;
     position: relative;
     z-index: 11;
 }
@@ -706,7 +694,6 @@ section {
     background: var(--bg-card);
     border-radius: 12px;
     overflow: hidden;
-    border: 1px solid var(--border-color);
     box-shadow: 0 20px 40px var(--shadow-dark);
 }
 
@@ -744,6 +731,8 @@ section {
     padding: 1.5rem;
     font-family: var(--font-mono);
     font-size: 0.9rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .code-line {
@@ -765,6 +754,11 @@ section {
 
 /* Skills Section */
 .skills {
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 40% 40%, rgba(6, 182, 212, 0.06) 0%, transparent 50%),
+        linear-gradient(135deg, var(--bg-primary) 0%, #0a0a0a 100%);
     position: relative;
     overflow: hidden;
 }
@@ -908,9 +902,15 @@ section {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
     margin-top: 3rem;
+}
+
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
@@ -1486,6 +1486,32 @@ section {
 }
 
 /* Contact Section */
+.contact {
+    background: 
+        radial-gradient(circle at 30% 20%, rgba(99, 102, 241, 0.06) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(6, 182, 212, 0.04) 0%, transparent 50%),
+        var(--bg-secondary);
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        linear-gradient(-135deg, transparent 0%, rgba(6, 182, 212, 0.02) 50%, transparent 100%);
+    z-index: 1;
+}
+
+.contact .container {
+    position: relative;
+    z-index: 2;
+}
+
 .contact-content {
     display: flex;
     justify-content: center;
@@ -1667,6 +1693,14 @@ section {
         gap: 2rem;
     }
     
+    .about {
+        padding-bottom: 80px;
+    }
+    
+    .about .scroll-indicator {
+        bottom: 1rem;
+    }
+    
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 1rem;
@@ -1743,6 +1777,14 @@ section {
         font-size: 1rem;
     }
     
+    .process {
+        padding-bottom: 80px;
+    }
+    
+    .process .scroll-indicator {
+        bottom: 1rem;
+    }
+    
     .note-content {
         flex-direction: column;
         text-align: center;
@@ -1773,6 +1815,26 @@ section {
         width: 320px;
         height: 320px;
     }
+    
+    .tech-icon:nth-child(1) {
+        top: 25px;
+        left: 25px;
+    }
+    
+    .tech-icon:nth-child(2) {
+        top: 25px;
+        right: 25px;
+    }
+    
+    .tech-icon:nth-child(3) {
+        bottom: 25px;
+        right: 25px;
+    }
+    
+    .tech-icon:nth-child(4) {
+        bottom: 25px;
+        left: 25px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1782,6 +1844,11 @@ section {
     
     .hero {
         padding-top: 90px; /* Extra padding for very small screens */
+        padding-bottom: 80px; /* Extra bottom padding for scroll arrow */
+    }
+    
+    .scroll-indicator {
+        bottom: 1rem;
     }
     
     .hero-buttons {
@@ -1799,8 +1866,24 @@ section {
         grid-template-columns: 1fr;
     }
     
+    .portfolio {
+        padding-bottom: 80px;
+    }
+    
+    .portfolio .scroll-indicator {
+        bottom: 1rem;
+    }
+    
     .skills-categories {
         grid-template-columns: 1fr;
+    }
+    
+    .skills {
+        padding-bottom: 80px;
+    }
+    
+    .skills .scroll-indicator {
+        bottom: 1rem;
     }
     
     .profile-ring {
@@ -1823,4 +1906,60 @@ section {
         height: 40px;
         font-size: 1rem;
     }
+    
+    .tech-icon:nth-child(1) {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .tech-icon:nth-child(2) {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .tech-icon:nth-child(3) {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .tech-icon:nth-child(4) {
+        bottom: 15px;
+        left: 15px;
+    }
+}
+
+/* Typewriter Animation */
+#typewriter-code {
+    position: relative;
+}
+
+#typewriter-code .code-line {
+    opacity: 1;
+    margin-bottom: 0.5rem;
+}
+
+
+@keyframes fadeInLine {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Footer */
+.footer {
+    background: var(--bg-secondary);
+    padding: 2rem 0;
+    margin-top: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.copyright {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.7;
 }
