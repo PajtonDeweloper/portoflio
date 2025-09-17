@@ -245,6 +245,7 @@ body {
     align-items: center;
     position: relative;
     overflow: hidden;
+    padding-top: 70px; /* Account for fixed navbar */
 }
 
 .hero-background {
@@ -445,6 +446,7 @@ body {
     opacity: 0;
     animation: fadeInScale 1s ease 0.5s forwards;
     transform: translateZ(0);
+    background: transparent;
 }
 
 .profile-ring {
@@ -458,6 +460,18 @@ body {
     animation: rotate 10s linear infinite;
 }
 
+.profile-ring::after {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: var(--bg-primary);
+    border-radius: 50%;
+    z-index: 1;
+}
+
 .profile-ring::before {
     content: '';
     position: absolute;
@@ -467,13 +481,14 @@ body {
     bottom: -3px;
 }
 
-.profile-image {
-width: 200px;
-height: 200px;
-border-radius: 50%;
-object-fit: cover;
-position: relative;
-z-index: 3;
+.profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 2;
+    background: var(--bg-primary);
 }
 
 .tech-icons {
@@ -1753,11 +1768,20 @@ section {
         width: 240px;
         height: 240px;
     }
+    
+    .tech-icons {
+        width: 320px;
+        height: 320px;
+    }
 }
 
 @media (max-width: 480px) {
     :root {
         --section-padding: 60px 0;
+    }
+    
+    .hero {
+        padding-top: 90px; /* Extra padding for very small screens */
     }
     
     .hero-buttons {
@@ -1777,5 +1801,26 @@ section {
     
     .skills-categories {
         grid-template-columns: 1fr;
+    }
+    
+    .profile-ring {
+        width: 220px;
+        height: 220px;
+    }
+    
+    .profile-img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .tech-icons {
+        width: 260px;
+        height: 260px;
+    }
+    
+    .tech-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
     }
 }
