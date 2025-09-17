@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Marsel Cylkowski - Twórca Stron Internetowych</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">MC</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link" data-pl="Strona główna" data-en="Home">Strona główna</a></li>
+                <li><a href="#about" class="nav-link" data-pl="O mnie" data-en="About">O mnie</a></li>
+                <li><a href="#skills" class="nav-link" data-pl="Umiejętności" data-en="Skills">Umiejętności</a></li>
+                <li><a href="#portfolio" class="nav-link" data-pl="Portfolio" data-en="Portfolio">Portfolio</a></li>
+                <li><a href="#process" class="nav-link" data-pl="Jak pracuję" data-en="How I Work">Jak pracuję</a></li>
+                <li><a href="#recommendations" class="nav-link" data-pl="Rekomendacje" data-en="Recommendations">Rekomendacje</a></li>
+                <li><a href="#contact" class="nav-link" data-pl="Kontakt" data-en="Contact">Kontakt</a></li>
+            </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="pl">
+                    <img src="https://flagcdn.com/w20/pl.png" alt="Polish" width="20" height="15">
+                    <span>PL</span>
+                </button>
+                <button class="lang-btn" data-lang="en">
+                    <img src="https://flagcdn.com/w20/gb.png" alt="English" width="20" height="15">
+                    <span>EN</span>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="greeting" data-pl="Cześć, jestem" data-en="Hi, I'm">Cześć, jestem</span>
+                    <span class="name">Marsel Cylkowski</span>
+                    <span class="role" data-pl="Twórca Stron Internetowych" data-en="Web Developer">Twórca Stron Internetowych</span>
+                </h1>
+                <p class="hero-subtitle" data-pl="Specjalizuję się w tworzeniu nowoczesnych one-page stron internetowych z wykorzystaniem AI. Pomagam firmom i przedsiębiorcom budować profesjonalną obecność online." data-en="I specialize in creating modern one-page websites using AI. I help businesses and entrepreneurs build a professional online presence.">
+                    Specjalizuję się w tworzeniu nowoczesnych one-page stron internetowych z wykorzystaniem AI. 
+                    Pomagam firmom i przedsiębiorcom budować profesjonalną obecność online.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#portfolio" class="btn btn-primary">
+                        <span data-pl="Zobacz moje prace" data-en="View My Work">Zobacz moje prace</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span data-pl="Skontaktuj się" data-en="Get In Touch">Skontaktuj się</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <div class="profile-ring"></div>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Marsel Cylkowski - Web Developer" class="profile-img">
+                    <div class="tech-icons">
+                        <div class="tech-icon" style="--delay: 0s">
+                            <i class="fab fa-html5"></i>
+                        </div>
+                        <div class="tech-icon" style="--delay: 0.5s">
+                            <i class="fab fa-css3-alt"></i>
+                        </div>
+                        <div class="tech-icon" style="--delay: 1s">
+                            <i class="fab fa-js-square"></i>
+                        </div>
+                        <div class="tech-icon" style="--delay: 1.5s">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="O mnie" data-en="About Me">O mnie</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="Poznaj moją historię i pasję do tworzenia" data-en="Discover my story and passion for creating">Poznaj moją historię i pasję do tworzenia</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3 data-pl="Pasja do technologii" data-en="Passion for Technology">Pasja do technologii</h3>
+                        <p data-pl="Jestem doświadczonym web developerem z ponad 5-letnim doświadczeniem w tworzeniu nowoczesnych stron internetowych. Moją specjalnością są one-page websites - eleganckie, szybkie i skuteczne rozwiązania dla firm i osób prywatnych." data-en="I am an experienced web developer with over 5 years of experience in creating modern websites. My specialty is one-page websites - elegant, fast and effective solutions for businesses and individuals.">
+                            Jestem doświadczonym web developerem z ponad 5-letnim doświadczeniem w tworzeniu 
+                            nowoczesnych stron internetowych. Moją specjalnością są <strong>one-page websites</strong> 
+                            - eleganckie, szybkie i skuteczne rozwiązania dla firm i osób prywatnych.
+                        </p>
+                    </div>
+                    <div class="text-block">
+                        <h3 data-pl="AI w procesie tworzenia" data-en="AI in the Creation Process">AI w procesie tworzenia</h3>
+                        <p data-pl="Aktywnie wykorzystuję sztuczną inteligencję w procesie projektowania i programowania, co pozwala mi tworzyć bardziej innowacyjne rozwiązania i przyspieszać proces developmentu przy zachowaniu najwyższej jakości." data-en="I actively use artificial intelligence in the design and programming process, which allows me to create more innovative solutions and accelerate the development process while maintaining the highest quality.">
+                            Aktywnie wykorzystuję <strong>sztuczną inteligencję</strong> w procesie projektowania 
+                            i programowania, co pozwala mi tworzyć bardziej innowacyjne rozwiązania i 
+                            przyspieszać proces developmentu przy zachowaniu najwyższej jakości.
+                        </p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label" data-pl="Zrealizowanych projektów" data-en="Completed Projects">Zrealizowanych projektów</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="5">0</div>
+                            <div class="stat-label" data-pl="lat doświadczenia" data-en="years of experience">lat doświadczenia</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label" data-pl="% one-page specjalizacja" data-en="% one-page specialization">% one-page specjalizacja</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="code-window">
+                        <div class="window-header">
+                            <div class="window-controls">
+                                <span class="control close"></span>
+                                <span class="control minimize"></span>
+                                <span class="control maximize"></span>
+                            </div>
+                            <div class="window-title">portfolio.js</div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-number">1</span>
+                                <span class="code-text">
+                                    <span class="keyword">const</span> 
+                                    <span class="variable">developer</span> = {
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">2</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">name</span>: 
+                                    <span class="string">'Marsel Cylkowski'</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">3</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">specialty</span>: 
+                                    <span class="string">'One-Page Websites'</span>,
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">4</span>
+                                <span class="code-text">
+                                    &nbsp;&nbsp;<span class="property">aiPowered</span>: 
+                                    <span class="boolean">true</span>
+                                </span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-number">5</span>
+                                <span class="code-text">};</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="skills-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="Umiejętności" data-en="Skills">Umiejętności</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="Technologie i narzędzia, które wykorzystuję" data-en="Technologies and tools I use">Technologie i narzędzia, które wykorzystuję</p>
+            </div>
+            <div class="skills-content">
+                <div class="skills-categories">
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-code"></i>
+                            <h3 data-pl="Web Development" data-en="Web Development">Web Development</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">HTML5 & CSS3</span>
+                                    <span class="skill-level">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="95%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">JavaScript (ES6+)</span>
+                                    <span class="skill-level">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Responsive Design</span>
+                                    <span class="skill-level">98%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="98%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">SASS/SCSS</span>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-robot"></i>
+                            <h3 data-pl="AI & Narzędzia" data-en="AI & Tools">AI & Narzędzia</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">AI-Assisted Coding</span>
+                                    <span class="skill-level">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="92%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">ChatGPT Integration</span>
+                                    <span class="skill-level">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="88%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Automated Testing</span>
+                                    <span class="skill-level">80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="category-header">
+                            <i class="fas fa-palette"></i>
+                            <h3 data-pl="Design & UX" data-en="Design & UX">Design & UX</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">UI/UX Design</span>
+                                    <span class="skill-level">87%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="87%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Figma</span>
+                                    <span class="skill-level">85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Adobe Creative Suite</span>
+                                    <span class="skill-level">75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-width="75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="Portfolio" data-en="Portfolio">Portfolio</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="Przykłady moich one-page realizacji" data-en="Examples of my one-page projects">Przykłady moich one-page realizacji</p>
+            </div>
+            <div class="portfolio-content">
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Projekt 1">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h4 data-pl="Restauracja \"Bella Vista\"" data-en="\"Bella Vista\" Restaurant">Restauracja "Bella Vista"</h4>
+                                    <p data-pl="Elegancka one-page strona dla restauracji z rezerwacją online" data-en="Elegant one-page website for restaurant with online reservation">Elegancka one-page strona dla restauracji z rezerwacją online</p>
+                                    <div class="portfolio-tech">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>JavaScript</span>
+                                        <span>AI Design</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Projekt 2">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h4 data-pl="Startup \"TechFlow\"" data-en="\"TechFlow\" Startup">Startup "TechFlow"</h4>
+                                    <p data-pl="Nowoczesna landing page dla startupu technologicznego" data-en="Modern landing page for technology startup">Nowoczesna landing page dla startupu technologicznego</p>
+                                    <div class="portfolio-tech">
+                                        <span>React</span>
+                                        <span>SCSS</span>
+                                        <span>Animations</span>
+                                        <span>AI Content</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Projekt 3">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h4 data-pl="Portfolio Fotografa" data-en="Photographer Portfolio">Portfolio Fotografa</h4>
+                                    <p data-pl="Minimalistyczna galeria z płynnymi animacjami" data-en="Minimalist gallery with smooth animations">Minimalistyczna galeria z płynnymi animacjami</p>
+                                    <div class="portfolio-tech">
+                                        <span>Vue.js</span>
+                                        <span>CSS Grid</span>
+                                        <span>GSAP</span>
+                                        <span>AI Optimization</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Projekt 4">
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-info">
+                                    <h4>Agencja Marketingowa</h4>
+                                    <p>Dynamiczna strona z interaktywnymi elementami</p>
+                                    <div class="portfolio-tech">
+                                        <span>HTML5</span>
+                                        <span>CSS3</span>
+                                        <span>Three.js</span>
+                                        <span>AI Analytics</span>
+                                    </div>
+                                </div>
+                                <div class="portfolio-links">
+                                    <a href="#" class="portfolio-link">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="specialization-note">
+                    <div class="note-content">
+                        <div class="note-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="note-text">
+                            <h3 data-pl="Specjalizuję się w projektach one-page" data-en="I specialize in one-page projects">Specjalizuję się w projektach one-page</h3>
+                            <p data-pl="Tworzę nowoczesne, responsywne strony internetowe, które łączą estetykę z funkcjonalnością. Każdy projekt jest unikalny i dostosowany do potrzeb klienta." data-en="I create modern, responsive websites that combine aesthetics with functionality. Each project is unique and tailored to client needs.">Tworzę nowoczesne, responsywne strony internetowe, które łączą estetykę z funkcjonalnością. Każdy projekt jest unikalny i dostosowany do potrzeb klienta.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- How I Work Section -->
+    <section id="process" class="process">
+        <div class="process-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="Jak pracuję" data-en="How I Work">Jak pracuję</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="6-etapowy proces współpracy przy tworzeniu strony internetowej" data-en="6-step collaboration process for website creation">6-etapowy proces współpracy przy tworzeniu strony internetowej</p>
+            </div>
+            
+            <div class="timeline-container">
+                <div class="timeline">
+                    <div class="timeline-step" data-step="1">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Konsultacja" data-en="Consultation">Konsultacja</h3>
+                            <p data-pl="Rozmawiamy o potrzebach i celach strony. Doradzam najlepsze rozwiązania." data-en="We discuss the needs and goals of the website. I recommend the best solutions.">Rozmawiamy o potrzebach i celach strony. Doradzam najlepsze rozwiązania.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="2">
+                        <div class="step-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Ustalenie zakresu i wycena" data-en="Scope Definition and Pricing">Ustalenie zakresu i wycena</h3>
+                            <p data-pl="Przedstawiam jasny plan działania i kosztorys bez ukrytych opłat." data-en="I present a clear action plan and cost estimate with no hidden fees.">Przedstawiam jasny plan działania i kosztorys bez ukrytych opłat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="3">
+                        <div class="step-icon">
+                            <i class="fas fa-drafting-compass"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Projekt i prototyp" data-en="Design and Prototype">Projekt i prototyp</h3>
+                            <p data-pl="Tworzę szkic lub interaktywny prototyp, który wspólnie dopracowujemy." data-en="I create a sketch or interactive prototype that we refine together.">Tworzę szkic lub interaktywny prototyp, który wspólnie dopracowujemy.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="4">
+                        <div class="step-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Budowa strony z użyciem AI" data-en="Website Development with AI">Budowa strony z użyciem AI</h3>
+                            <p data-pl="Realizuję projekt z pomocą AI i mojego doświadczenia, optymalizując kod i efektywność." data-en="I implement the project with AI assistance and my experience, optimizing code and efficiency.">Realizuję projekt z pomocą AI i mojego doświadczenia, optymalizując kod i efektywność.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="5">
+                        <div class="step-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Testowanie i akceptacja" data-en="Testing and Acceptance">Testowanie i akceptacja</h3>
+                            <p data-pl="Sprawdzamy stronę pod kątem działania, szybkości, mobilności." data-en="We test the website for functionality, speed, and mobile responsiveness.">Sprawdzamy stronę pod kątem działania, szybkości, mobilności.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-step" data-step="6">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <div class="step-content">
+                            <h3 data-pl="Publikacja i wsparcie" data-en="Launch and Support">Publikacja i wsparcie</h3>
+                            <p data-pl="Wdrażam stronę na serwerze i oferuję wsparcie techniczne po uruchomieniu." data-en="I deploy the website on the server and offer technical support after launch.">Wdrażam stronę na serwerze i oferuję wsparcie techniczne po uruchomieniu.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-line"></div>
+            </div>
+            
+            <div class="process-summary">
+                <div class="summary-content">
+                    <div class="summary-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="summary-text">
+                        <h3 data-pl="Płacisz dopiero po zakończeniu projektu" data-en="You pay only after project completion">Płacisz dopiero po zakończeniu projektu</h3>
+                        <p data-pl="Zaufanie i jakość są dla mnie priorytetem. Bez zaliczek – płatność tylko po pełnej satysfakcji." data-en="Trust and quality are my priority. No advance payments – payment only after full satisfaction.">Zaufanie i jakość są dla mnie priorytetem. Bez zaliczek – płatność tylko po pełnej satysfakcji.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendations Section -->
+    <section id="recommendations" class="recommendations">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="Rekomendacje" data-en="Recommendations">Rekomendacje</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="Co mówią o mnie moi klienci" data-en="What my clients say about me">Co mówią o mnie moi klienci</p>
+            </div>
+            <div class="recommendations-grid">
+                <div class="recommendation-card">
+                    <div class="recommendation-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-pl="Marsel stworzył dla nas fantastyczną one-page stronę. Wykorzystanie AI w procesie projektowania pozwoliło na szybkie iteracje i doskonały efekt końcowy. Profesjonalizm na najwyższym poziomie!" data-en="Marsel created a fantastic one-page website for us. Using AI in the design process allowed for quick iterations and an excellent final result. Professionalism at the highest level!">"Marsel stworzył dla nas fantastyczną one-page stronę. Wykorzystanie AI w procesie projektowania pozwoliło na szybkie iteracje i doskonały efekt końcowy. Profesjonalizm na najwyższym poziomie!"</p>
+                        <div class="recommendation-author">
+                            <div class="author-avatar">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Marcin Kowalski">
+                            </div>
+                            <div class="author-info">
+                                <h4>Marcin Kowalski</h4>
+                                <span data-pl="CEO, TechStart Sp. z o.o." data-en="CEO, TechStart Ltd.">CEO, TechStart Sp. z o.o.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendation-card">
+                    <div class="recommendation-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-pl="Współpraca z Marselem była bardzo satysfakcjonująca. Jego podejście do one-page websites i wykorzystanie nowoczesnych technologii AI sprawiło, że nasza strona wyróżnia się na rynku." data-en="Working with Marsel was very satisfying. His approach to one-page websites and use of modern AI technologies made our website stand out in the market.">"Współpraca z Marselem była bardzo satysfakcjonująca. Jego podejście do one-page websites i wykorzystanie nowoczesnych technologii AI sprawiło, że nasza strona wyróżnia się na rynku."</p>
+                        <div class="recommendation-author">
+                            <div class="author-avatar">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Anna Nowak">
+                            </div>
+                            <div class="author-info">
+                                <h4>Anna Nowak</h4>
+                                <span data-pl="Właścicielka, Bella Vista Restaurant" data-en="Owner, Bella Vista Restaurant">Właścicielka, Bella Vista Restaurant</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="recommendation-card">
+                    <div class="recommendation-content">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p data-pl="Marsel to prawdziwy ekspert w dziedzinie one-page stron. Jego znajomość AI i nowoczesnych technologii pozwoliła nam uzyskać stronę, która przekracza nasze oczekiwania." data-en="Marsel is a true expert in the field of one-page websites. His knowledge of AI and modern technologies allowed us to get a website that exceeds our expectations.">"Marsel to prawdziwy ekspert w dziedzinie one-page stron. Jego znajomość AI i nowoczesnych technologii pozwoliła nam uzyskać stronę, która przekracza nasze oczekiwania."</p>
+                        <div class="recommendation-author">
+                            <div class="author-avatar">
+                                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg==" alt="Tomasz Wiśniewski">
+                            </div>
+                            <div class="author-info">
+                                <h4>Tomasz Wiśniewski</h4>
+                                <span data-pl="Fotograf, Portfolio Online" data-en="Photographer, Online Portfolio">Fotograf, Portfolio Online</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-pl="Kontakt" data-en="Contact">Kontakt</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle" data-pl="Gotowy na nowy projekt? Skontaktuj się ze mną!" data-en="Ready for a new project? Get in touch with me!">Gotowy na nowy projekt? Skontaktuj się ze mną!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h4 data-pl="Email" data-en="Email">Email</h4>
+                        <p>marsel.cylkowski@webdev.pl</p>
+                        <a href="mailto:marsel.cylkowski@webdev.pl" class="contact-link" data-pl="Wyślij email" data-en="Send Email">Wyślij email</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h4 data-pl="Telefon" data-en="Phone">Telefon</h4>
+                        <p>+48 603 271 576</p>
+                        <a href="tel:+48603271576" class="contact-link" data-pl="Zadzwoń" data-en="Call">Zadzwoń</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h4 data-pl="Lokalizacja" data-en="Location">Lokalizacja</h4>
+                        <p data-pl="Warszawa, Polska" data-en="Warsaw, Poland">Warszawa, Polska</p>
+                        <a href="https://www.google.com/maps/place/Warszawa,+Polska/@52.2319581,21.0062748,12z/data=!3m1!4b1!4m5!3m4!1s0x471ecc669a134b35:0x72f0be2a88e8e21!8m2!3d52.2319581!4d21.0062748" class="contact-link" data-pl="Zobacz mapę" data-en="View Map">Zobacz mapę</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+    <script src="language-switcher.js"></script>
+</body>
+</html>
